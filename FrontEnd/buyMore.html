@@ -34,21 +34,40 @@
     </div>
 
     <!-- Elysia 상세 정보 -->
+    <script type="text/javascript">
+        window.addEventListener('DOMContentLoaded', function() {
+            const data = JSON.parse(localStorage.getItem('productData'));
+            const itemNameClass = document.getElementsByClassName('item-name')[0];
+            const itemImageClass = document.getElementsByClassName('product-image')[1];
+            const itemPriceClass = document.getElementsByClassName('price-eth')[0];
+            const itemPriceDollar = document.getElementsByClassName('price-dollar')[0];
+            console.log(itemNameClass);
+            if (data) {
+                const { name, price, imgSrc } = data;
+                itemNameClass.innerText = `${name}`;
+                itemImageClass.src = `${imgSrc}`;
+                itemPriceClass.innerText = `${price} ETH`;
+                const dollarPrice = parseFloat(`${price}`);
+                itemPriceDollar.innerText = `$${dollarPrice * 4585.11}`;
+            }
+           localStorage.removeItem('productData');
+        });
+    </script>
     <div class="product-detail">
         <div class="product-image">
-            <img src="asset/transaction-1.png" alt="Elysia Dawnbringerr">
+            <img alt="Elysia Dawnbringerr" class="product-image">
         </div>
         <div class="product-info">
             <p class="item-category">Pink Fan Club</p>
-            <p class="item-name">Elysia Dawnbringerr</p>
+            <p class="item-name"></p>
             <div class="owner-info">
                 <span>324 owners</span> | <span>3.5K Views</span> | <span>64 favorites</span> | <span>share</span></p>
             </div>
             <div class="price-container">
                 <p>Sale ends 2025년 2월 30일 오전 2시 52분</p>
                 <div class="price">
-                    <span class="price-eth">0.0483 ETH</span>
-                    <span class="price-dollar">$175.61</span>
+                    <span class="price-eth"></span>
+                    <span class="price-dollar"></span>
                 </div>
                 <div class="action-buttons">
                     <button class="buy-now">Buy Now</button>
@@ -56,12 +75,13 @@
                 </div>
             </div>
         <div class="more-collection">
-            <span class="main">Show more collection</span> 
+            <span class="main">Show more collection</span>
             <span class="sub">View More</span>
         </div>
-            
+
         </div>
     </div>
+
 
     <div class="modal" id="buyNowModal">
         <div class="modal-content">
@@ -69,14 +89,14 @@
             <h2>Elysia Dawnbringerr</h2>
             <img src="asset/character-2.png" alt="Elysia Dawnbringerr">
             <div class="modal-price">
-                <span class="eth">0.0483 ETH</span> 
+                <span class="eth">0.0483 ETH</span>
                 <span class="dollar">$175.61</span>
             </div>
             <button class="confirm-buy">Confirm Purchase</button>
             <p class="notice">By purchasing this NFT, you acknowledge and agree that it is for personal use only, and any unauthorized reproduction, distribution, or commercial use is strictly prohibited.</p>
         </div>
     </div>
-    
+
 
     <script src="modal.js"></script>
 

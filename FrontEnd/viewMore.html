@@ -63,7 +63,7 @@
         <button>Analytics</button>
         <button>Activity</button>
     </div>
-    
+
     <div class="header-1">
         <div class="search-bar-1">
             <input type="text" class="search-input" placeholder="Search">
@@ -85,19 +85,46 @@
                 <img src="asset/icon-cart.png" alt="Cart Icon">
             </button>
         </div>
-    </div>    
+    </div>
 
+    <script type="text/javascript">
+        window.addEventListener('DOMContentLoaded', function() {
+            const btn = document.getElementById('viewMore1');
+            btn.addEventListener('click', () => {
+              const data = { name: "Elysia Dawnbringerr", price: "0.0383", imgSrc: "asset/transaction-1.png" };
+              localStorage.setItem('productData', JSON.stringify(data));
+              window.location.href = 'buyMore.html';
+            });
+            // const itemNameClass = document.getElementsByClassName('item-name');
+            // const itemPriceClass = document.getElementsByClassName('item-price');
+            // const itemImgClass = document.getElementsByClassName('item-img');
+            //
+            // itemName = ["Elysia Dawnbringerr", "Luna Shadowveil", "Draven Ironclad", "Mira Starlight"];
+            // itemPrice = ["0.0383 ETH", "0.0383 ETH", "0.0383 ETH", "0.0383 ETH"];
+            // itemImg = ["asset/transaction-1.png", "asset/transaction-2.png", "asset/transaction-3.png", "asset/transaction-4.png", "asset/market-1.png" ,"asset/market-2.png" ,"asset/market-3.png" ,"asset/market-4.png", "asset/character-1.png" ,"asset/character-2.png" ,"asset/character-3.png" ,"asset/character-4.png", "asset/character-1.png" ,"asset/character-2.png" ,"asset/character-3.png" ,"asset/character-4.png"];
+            //
+            // let j = 0;
+            // let k = 0;
+            // for (let i = 0; i < itemNameClass.length; i++) {
+            //     itemNameClass[i].innerText = itemName[j];
+            //     itemPriceClass[i].innerText = itemPrice[j];
+            //     itemImgClass[i].src = itemImg[k];
+            //     j += 1;
+            //     k += 1;
+            //     if (j >= itemName.length) j = 0;
+            // }
+        });
+
+    </script>
     <div class="items">
         <div class="item">
-            <img src="asset/transaction-1.png" alt="Transaction">
+            <img src = "asset/transaction-1.png" alt="Transaction" class="item-img">
             <p class="item-name">Elysia Dawnbringerr</p>
             <p class="item-price">0.0383 ETH</p>
             <a href="elysia.html">
                 <button>Buy Now</button>
             </a>
-            <a href="viewMore.html">
-                <button>View More</button>
-            </a>
+            <button id="viewMore1">View More</button>
         </div>
         <div class="item">
             <img src="asset/transaction-2.png" alt="Transaction">
