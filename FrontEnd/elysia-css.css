@@ -1,0 +1,383 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #4a4a8a;
+    color: #ffffff;
+    padding: 10px 50px;
+    height: 70px;
+}
+
+.logo {
+    display: flex;
+    align-items: center; /* 자식 요소들을 수직 가운데 정렬 */
+    gap: 10px; /* 이미지와 텍스트 사이 간격 설정 (원하는 대로 조절 가능) */
+}
+
+.logo span {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.logo img {
+    width: 50px;
+    height: auto;
+    object-fit: contain;
+}
+
+.search-bar {
+    flex: 1;
+    margin: 0 16px;
+    max-width: 800px;
+    
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 10px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.8);
+    height: 40px;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    height: 60px;
+    gap: 10px; /* 버튼들 사이 간격 10px로 설정 */
+}
+
+button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: rgba(255, 255, 255, 1);
+}
+
+button img {
+    width: 24px;
+    height: 24px;
+    display: block;
+}
+
+.user, .cart {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.login {
+    display: flex;
+    gap: 10px;
+    height: 60px;
+}
+
+.login button {
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #4a4a8a;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 24px;
+    width: 170px;
+    height: 100%;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+/* 상품 상세 페이지 레이아웃 */
+/* 상품 상세 페이지 레이아웃 */
+.product-detail {
+    display: flex;
+    max-width: 1000px;
+    margin: 50px;
+    gap: 100px;
+}
+
+.product-image {
+    flex: 1;
+    padding: 0;
+    position: relative;
+}
+
+.product-image img {
+    width: 700px;
+    height: auto;
+    align-items: left;
+    margin-left: 50px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product-image .favorite-icon {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.product-info {
+    flex: 1;
+}
+
+.product-info .item-category {
+    font-size: 25px;
+    font-weight: bold;
+    color: #125DC8;
+    margin-top: 0;
+}
+
+.product-info .item-name {
+    color: #202020;
+    margin-top: 10px;
+    font-size: 30px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+.owner-info {
+    margin-bottom: 20px;
+    font-size: 20px;
+    color: #666;
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 10px;
+    align-items: center;
+    white-space: nowrap;
+}
+
+
+.price-container {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 600px;
+    height: 240px;
+}
+
+.price-container p {
+    font-size: 22px;
+    text-align: left;
+    color: #828282;
+    margin: 0;
+}
+
+.price-eth {
+    font-size: 42px;
+    font-weight: bold;
+    text-align: left;
+    margin: 0px;
+}
+
+.price .price-dollar {
+    font-size: 28px;
+    margin-left: 5px;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+    justify-content: center;
+}
+
+.action-buttons .buy-now {
+    font-size: 24px;
+    margin-top: 0px;
+    font-weight: bold;
+    border: none;
+    border-radius: 15px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    width: 300px;
+    height: 100px;
+}
+
+.action-buttons .make-offer {
+    margin-top: 0px;
+    font-size: 24px;
+    font-weight: bold;
+    border: none;
+    border-radius: 15px;
+    background-color: #f0f0f0;
+    color: black;
+    cursor: pointer;
+    width: 300px;
+    height: 100px;
+}
+
+.action-buttons .buy-now:hover {
+    background-color: #0056b3;
+}
+
+.action-buttons .make-offer:hover {
+    background-color: #e0e0e0;
+}
+
+.more-collection {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    width: 600px;
+    height: 200px;
+    border-bottom: 1px solid #e0e0e0;
+    border-top: 1px solid #e0e0e0;
+}
+
+.more-collection .main {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+}
+
+.more-collection .sub {
+    color: #007bff;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.more-collection .sub:hover {
+    text-decoration: underline;
+}
+
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1001;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 600px;
+    width: 90%;
+    text-align: center;
+    position: relative;
+}
+
+.modal-content img {
+    width: 70%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.modal-content h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.modal-content .price {
+    font-size: 28px;
+    font-weight: bold;
+    margin: 20px 0;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.modal-price .eth {
+    font-size: 48px;
+    font-weight: bold;
+    text-align: left;
+    margin: 0px;
+}
+
+.modal-price .dollar {
+    font-size: 28px;
+    margin-left: 10px;
+}
+
+.modal-content button.confirm-buy {
+    padding: 15px 30px;
+    font-size: 24px;
+    border: none;
+    border-radius: 10px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 300px;
+    height: 70px;
+}
+
+.modal-content .notice {
+    font-size: 14px;
+    color: #888;
+    margin-top: 20px;
+}
+
+.modal-content .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Update Button Style for Popup Notice */
+.notice {
+    font-size: 14px;
+    color: #888;
+    margin-top: 20px;
+}
+
+.logo-link {
+    text-decoration: none;  /* 링크의 밑줄 제거 */
+    color: inherit;         /* 부모 요소의 색상 사용 */
+}
+
+.logo-link:hover {
+    text-decoration: none;  /* 링크에 마우스를 올렸을 때도 밑줄 제거 */
+}

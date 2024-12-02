@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elysia Dawnbringerr - LumiQuest</title>
+    <link rel="stylesheet" href="elysia-css.css">
+</head>
+<body>
+    <!-- 상단 바 복사 -->
+    <div class="header">
+        <div class="logo">
+            <img src="asset/logo.png" alt="logo">
+            <a href="Mainpage.html" class="logo-link">
+                <span>LumiQuest</span>
+            </a>
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search">
+        </div>
+        <div class="header-container">
+            <button class="user-button">
+                <img src="asset/icon-user.png" alt="User Icon">
+            </button>
+            <div class="cart">
+                <button class="cart-button">
+                    <img src="asset/icon-cart.png" alt="Cart Icon">
+                </button>
+            </div>
+            <div class="login">
+                <button id="loginBtn">Login</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Elysia 상세 정보 -->
+    <div class="product-detail">
+        <div class="product-image">
+            <img src="asset/transaction-1.png" alt="Elysia Dawnbringerr">
+        </div>
+        <div class="product-info">
+            <p class="item-category">Pink Fan Club</p>
+            <p class="item-name">Elysia Dawnbringerr</p>
+            <div class="owner-info">
+                <span>324 owners</span> | <span>3.5K Views</span> | <span>64 favorites</span> | <span>share</span></p>
+            </div>
+            <div class="price-container">
+                <p>Sale ends 2025년 2월 30일 오전 2시 52분</p>
+                <div class="price">
+                    <span class="price-eth">0.0483 ETH</span>
+                    <span class="price-dollar">$175.61</span>
+                </div>
+                <div class="action-buttons">
+                    <button class="buy-now">Buy Now</button>
+                    <button class="make-offer">Make Offer</button>
+                </div>
+            </div>
+        <div class="more-collection">
+            <span class="main">Show more collection</span> 
+            <span class="sub">View More</span>
+        </div>
+            
+        </div>
+    </div>
+
+    <div class="modal" id="buyNowModal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Elysia Dawnbringerr</h2>
+            <img src="asset/character-2.png" alt="Elysia Dawnbringerr">
+            <div class="modal-price">
+                <span class="eth">0.0483 ETH</span> 
+                <span class="dollar">$175.61</span>
+            </div>
+            <button class="confirm-buy">Confirm Purchase</button>
+            <p class="notice">By purchasing this NFT, you acknowledge and agree that it is for personal use only, and any unauthorized reproduction, distribution, or commercial use is strictly prohibited.</p>
+        </div>
+    </div>
+    
+
+    <script src="modal.js"></script>
+
+</body>
+</html>
